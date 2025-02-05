@@ -1,0 +1,107 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('ses.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    /* Ensure background image is portrait-oriented */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    margin: 0;
+    position: relative;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    color: #e6005c;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #444;
+    font-size: 16px;
+}
+
+.hint {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #e6005c;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    margin: 10px;
+    transition: background 0.3s ease, transform 0.2s;
+    position: relative;
+}
+
+.btn:hover {
+    background: #cc0052;
+    transform: scale(1.05);
+}
+
+.no {
+    position: absolute;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .card {
+        padding: 15px;
+        max-width: 90%;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .hint {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Surprise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Hey Love! 💕</h1>
+        <p>Guess what? I have a little surprise for you! But first, you have to answer this super serious question...</p>
+        <h2>Will you be my Valentine? 😘</h2>
+        <div class="buttons">
+            <a href="#" class="btn yes">YES! 💖</a>
+            <a href="#" class="btn no">No... 😢</a>
+        </div>
+        <p class="hint">(Hint: There’s only one right answer 😉)</p>
+    </div>
+    <script>
+        document.querySelector('.no').addEventListener('click', function(event) {
+            event.preventDefault();
+            let btn = event.target;
+            let randomX = Math.floor(Math.random() * window.innerWidth - 100);
+            let randomY = Math.floor(Math.random() * window.innerHeight - 50);
+            btn.style.position = 'absolute';
+            btn.style.left = randomX + 'px';
+            btn.style.top = randomY + 'px';
+        });
+        
+        document.querySelector('.yes').addEventListener('click', function(event) {
+            event.preventDefault();
+            alert("YAY! Best decision ever! 💕 Can't wait for our special day!");
+        });
+    </script>
+</body>
+</html>
